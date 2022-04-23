@@ -5,6 +5,8 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    
+    # raise
   end
 
   def new
@@ -31,10 +33,12 @@ class TasksController < ApplicationController
 
   def destroy
     @task = Task.find(params[:id])
+    # raise
     @task.destroy
-
+    
     # no need for app/views/restaurants/destroy.html.erb
     redirect_to tasks_path
+    
   end
 
   private

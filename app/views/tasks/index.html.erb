@@ -1,11 +1,14 @@
-<ul>
+<h1>My tasks</h1>
+
+<ul class ="p-5">
   <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task) %></li>
+    <li><%= link_to task.title, task_path(task) %> </li>
   <% end %>
 </ul>
-
+<i class="fas fa-people-carry"></i>
 <p><%= link_to 'add new task', tasks_new_path %></p>
 
 
 
 
+ <%# <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } %>

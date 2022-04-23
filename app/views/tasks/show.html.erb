@@ -5,10 +5,13 @@
 <p><%= link_to'Back to the list', tasks_path %></p>
 <p><%= link_to'edit', edit_task_path(@task) %></p>
 
-<%= link_to "Delete #{@task.title}",
-            task_path(@task),
+<p><%= link_to 'Delete',
+            task_path(@task.id),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
+            data: { confirm: "Delete #{@task.title}?" } %></p>
 
-<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/@task.title/@task.id">
-</a>
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/@task.title/@task.id"></a>
+
+
+
+

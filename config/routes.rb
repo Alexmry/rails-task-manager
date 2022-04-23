@@ -15,10 +15,12 @@ Rails.application.routes.draw do
 
 #EDIT then UPDATE
   #EditTheTaskGetTheForm
-  get "tasks/:id/edit", to: "tasks#edit", as: "edit_task"
+  get "tasks/:id/edit", to: "tasks#edit", as: :edit_task
   #UpdateTheTaskPostTheForm
   patch "tasks/:id", to: "tasks#update"
 
 #DELETE
   delete "tasks/:id", to: "tasks#destroy"
+
+  # resources :tasks
 end
